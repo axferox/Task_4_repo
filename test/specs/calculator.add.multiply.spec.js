@@ -42,39 +42,39 @@ describe(`It should test Calculator class method 'add' negative scenarios`, () =
         expect(() => calculator.add(null, 5, 6)()).to.throw();
     });
     // eslint-disable-next-line max-len
-    it(`It should test the 'increment' is not defined(null) an error is thrown`, () => {
+    it(`It should test that if 'increment' is not defined(null) an error is thrown`, () => {
         expect(() => calculator.add(68, null)()).to.throw();
     });
     // eslint-disable-next-line max-len
-    it(`It should test the 'number' and 'increment' are not defined(null) an error is thrown`, () => {
+    it(`It should test that if 'number' and 'increment' are not defined(null) an error is thrown`, () => {
         expect(() => calculator.add(null, null)()).to.throw();
     });
     // eslint-disable-next-line max-len
-    it(`It should test the 'number' and 'increment' are not defined(values are empty) an error is thrown`, () => {
+    it(`It should test that if 'number' and 'increment' are not defined(values are empty) an error is thrown`, () => {
         expect(() => calculator.add()()).to.throw();
     });
     // eslint-disable-next-line max-len
-    it(`It should test the only 'number' is defined an error is thrown`, () => {
+    it(`It should test that if only 'number' is defined an error is thrown`, () => {
         expect(() => calculator.add(5)()).to.throw();
     });
     // eslint-disable-next-line max-len
-    it(`It should test the only 'number' is defined(null) an error is thrown`, () => {
+    it(`It should test that if only 'number' is defined(null) an error is thrown`, () => {
         expect(() => calculator.add(null)()).to.throw();
     });
     // eslint-disable-next-line max-len
-    it(`It should test the only 'number' is defined(as undefined) an error is thrown`, () => {
+    it(`It should test that if only 'number' is defined(as undefined) an error is thrown`, () => {
         expect(() => calculator.add(undefined)()).to.throw();
     });
     // eslint-disable-next-line max-len
-    it(`It should test the 'number' and 'increment' are not defined(undefined) an error is thrown`, () => {
+    it(`It should test that if 'number' and 'increment' are not defined(undefined) an error is thrown`, () => {
         expect(() => calculator.add(undefined, undefined)()).to.throw();
     });
     // eslint-disable-next-line max-len
-    it(`It should test the 'number' is not defined(undefined) an error is thrown`, () => {
+    it(`It should test that if 'number' is not defined(undefined) an error is thrown`, () => {
         expect(() => calculator.add(undefined, 5)()).to.throw();
     });
     // eslint-disable-next-line max-len
-    it(`It should test the 'increment' is not defined(undefined) an error is thrown`, () => {
+    it(`It should test that if 'increment' is not defined(undefined) an error is thrown`, () => {
         expect(() => calculator.add(68, undefined)()).to.throw();
     });
 });
@@ -116,43 +116,43 @@ describe(`It should test Calculator class method 'multiply' negative scenarios`,
         multiplier = null;
     });
     // eslint-disable-next-line max-len
-    it(`It should test the 'number' is not defined(null) an error is thrown`, () => {
+    it(`It should test that if 'number' is not defined(null) an error is thrown`, () => {
         expect(() => multiplier.multiply(null, 5)()).to.throw();
     });
     // eslint-disable-next-line max-len
-    it(`It should test the 'increment' is not defined(null) an error is thrown`, () => {
+    it(`It should test that if 'increment' is not defined(null) an error is thrown`, () => {
         expect(() => multiplier.multiply(68, null)()).to.throw();
     });
     // eslint-disable-next-line max-len
-    it(`It should test the 'number' and 'increment' are not defined(null) an error is thrown`, () => {
+    it(`It should test that if 'number' and 'increment' are not defined(null) an error is thrown`, () => {
         expect(() => multiplier.multiply(null, null)()).to.throw();
     });
     // eslint-disable-next-line max-len
-    it(`It should test the 'number' and 'increment' are not defined(values are empty) an error is thrown`, () => {
+    it(`It should test that if 'number' and 'increment' are not defined(values are empty) an error is thrown`, () => {
         expect(() => multiplier.multiply()()).to.throw();
     });
     // eslint-disable-next-line max-len
-    it(`It should test the only 'number' is defined an error is thrown`, () => {
+    it(`It should test that if the only 'number' is defined an error is thrown`, () => {
         expect(() => multiplier.multiply(5)()).to.throw();
     });
     // eslint-disable-next-line max-len
-    it(`It should test the only 'number' is defined(null) an error is thrown`, () => {
+    it(`It should test that if the only 'number' is defined(null) an error is thrown`, () => {
         expect(() => multiplier.multiply(null)()).to.throw();
     });
     // eslint-disable-next-line max-len
-    it(`It should test the only 'number' is defined(as undefined) an error is thrown`, () => {
+    it(`It should test that if the only 'number' is defined(as undefined) an error is thrown`, () => {
         expect(() => multiplier.multiply(undefined)()).to.throw();
     });
     // eslint-disable-next-line max-len
-    it(`It should test the 'number' and 'increment' are not defined(undefined) an error is thrown`, () => {
+    it(`It should test that if 'number' and 'increment' are not defined(undefined) an error is thrown`, () => {
         expect(() => multiplier.multiply(undefined, undefined)()).to.throw();
     });
     // eslint-disable-next-line max-len
-    it(`It should test the 'number' is not defined(undefined) an error is thrown`, () => {
+    it(`It should test that if 'number' is not defined(undefined) an error is thrown`, () => {
         expect(() => multiplier.multiply(undefined, 5)()).to.throw();
     });
     // eslint-disable-next-line max-len
-    it(`It should test the 'increment' is not defined(undefined) an error is thrown`, () => {
+    it(`It should test that if 'increment' is not defined(undefined) an error is thrown`, () => {
         expect(() => multiplier.multiply(68, undefined)()).to.throw();
     });
 });
