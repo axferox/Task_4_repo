@@ -5,7 +5,7 @@
  */
 
 class Calculator {
-  constructor() { }
+  constructor() {}
 
   /**
    *
@@ -15,28 +15,14 @@ class Calculator {
    * @memberof Calculator
    */
   add(...numbers) {
-    if (numbers.length === 0) {
-      // eslint-disable-next-line max-len
-      throw new TypeError('Unable to calculate, number and increment are not defined');
-    } else if (numbers.length < 2 && typeof numbers[0] === 'number') {
+    if (numbers.length > 1 && numbers.every((item) => typeof item === 'number')) {
+      return numbers.reduce((sum, current) => sum + current);
+    }
+    if (numbers.length === 1 && typeof numbers[0] === 'number') {
       throw new TypeError('Unable to calculate, only one number is defined');
-    } else if (numbers.length < 2 && typeof numbers[0] !== 'number') {
-      throw new TypeError(`Unable to calculate, [${numbers[0]}] is not a number`);
     } else {
-      return numbers.reduce((sum, current) => {
-        if (typeof (current) !== 'number' || typeof (sum) !== 'number') {
-          // eslint-disable-next-line max-len
-          if (typeof (sum) !== 'number') {
-            // eslint-disable-next-line max-len
-            throw new TypeError(`Unable to calculate, [${sum}] is not a number`);
-          } else if (typeof (current) !== 'number') {
-            // eslint-disable-next-line max-len
-            throw new TypeError(`Unable to calculate, [${current}] is not a number`);
-          }
-        } else {
-          return sum + current;
-        }
-      }, 0);
+      const notaNumber = numbers.find((item) => typeof item !== 'number');
+      throw new TypeError(`Unable to calculate, [${notaNumber}] is not a number`);
     }
   }
 
@@ -48,28 +34,14 @@ class Calculator {
    * @memberof Calculator
    */
   multiply(...numbers) {
-    if (numbers.length === 0) {
-      // eslint-disable-next-line max-len
-      throw new TypeError('Unable to multiply, number and multiplier are not defined');
-    } else if (numbers.length < 2 && typeof numbers[0] === 'number') {
+    if (numbers.length > 1 && numbers.every((item) => typeof item === 'number')) {
+      return numbers.reduce((multiply, current) => multiply * current);
+    }
+    if (numbers.length === 1 && typeof numbers[0] === 'number') {
       throw new TypeError('Unable to multiply, only one number is defined');
-    } else if (numbers.length < 2 && typeof numbers[0] !== 'number') {
-      throw new TypeError(`Unable to multiply, [${numbers[0]}] is not a number`);
     } else {
-      return numbers.reduce((multiply, current) => {
-        if (typeof (current) !== 'number' || typeof (multiply) !== 'number') {
-          // eslint-disable-next-line max-len
-          if (typeof (multiply) !== 'number') {
-            // eslint-disable-next-line max-len
-            throw new TypeError(`Unable to multiply, [${multiply}] is not a number`);
-          } else if (typeof (current) !== 'number') {
-            // eslint-disable-next-line max-len
-            throw new TypeError(`Unable to multiply, [${current}] is not a number`);
-          }
-        } else {
-          return multiply * current;
-        }
-      });
+      const notaNumber = numbers.find((item) => typeof item !== 'number');
+      throw new TypeError(`Unable to multiply, [${notaNumber}] is not a number`);
     }
   }
 }
