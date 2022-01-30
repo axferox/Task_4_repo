@@ -38,6 +38,14 @@ describe('It should test Calculator class method \'add\' negative scenarios', ()
     calculator = null;
   });
   // eslint-disable-next-line max-len
+  it('It should test that if \'number\' is string an error is thrown', () => {
+    expect(() => calculator.add('string')()).to.throw('Unable to calculate, [string] is not a number');
+  });
+  // eslint-disable-next-line max-len
+  it('It should test that if \'number\' is an array of numbers an error is thrown', () => {
+    expect(() => calculator.add([2, 3, 4])()).to.throw('Unable to calculate, [2,3,4] is not a number');
+  });
+  // eslint-disable-next-line max-len
   it('It should test that if \'number\' is null an error is thrown', () => {
     expect(() => calculator.add(null, 5, 6)()).to.throw('Unable to calculate, [null] is not a number');
   });
@@ -59,7 +67,7 @@ describe('It should test Calculator class method \'add\' negative scenarios', ()
   });
   // eslint-disable-next-line max-len
   it('It should test that if only \'number\' is defined(null) an error is thrown', () => {
-    expect(() => calculator.add('string')()).to.throw('Unable to calculate, [string] is not a number');
+    expect(() => calculator.add(null)()).to.throw('Unable to calculate, [null] is not a number');
   });
   // eslint-disable-next-line max-len
   it('It should test that if only \'number\' is defined(as undefined) an error is thrown', () => {
@@ -114,6 +122,13 @@ describe('It should test Calculator class method \'multiply\' negative scenarios
   });
   afterEach(() => {
     multiplier = null;
+  });
+  it('It should test that if \'number\' is string an error is thrown', () => {
+    expect(() => calculator.multiply('string')()).to.throw('Unable to calculate, [string] is not a number');
+  });
+  // eslint-disable-next-line max-len
+  it('It should test that if \'number\' is an array of numbers an error is thrown', () => {
+    expect(() => calculator.multiply([2, 3, 4])()).to.throw('Unable to calculate, [2,3,4] is not a number');
   });
   // eslint-disable-next-line max-len
   it('It should test that if \'number\' is not defined(null) an error is thrown', () => {
