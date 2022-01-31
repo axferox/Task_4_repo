@@ -124,11 +124,11 @@ describe('It should test Calculator class method \'multiply\' negative scenarios
     multiplier = null;
   });
   it('It should test that if \'number\' is string an error is thrown', () => {
-    expect(() => calculator.multiply('string')()).to.throw('Unable to calculate, [string] is not a number');
+    expect(() => multiplier.multiply('string')()).to.throw('Unable to multiply, [string] is not a number');
   });
   // eslint-disable-next-line max-len
   it('It should test that if \'number\' is an array of numbers an error is thrown', () => {
-    expect(() => calculator.multiply([2, 3, 4])()).to.throw('Unable to calculate, [2,3,4] is not a number');
+    expect(() => multiplier.multiply([2, 3, 4])()).to.throw('Unable to multiply, [2,3,4] is not a number');
   });
   // eslint-disable-next-line max-len
   it('It should test that if \'number\' is not defined(null) an error is thrown', () => {
