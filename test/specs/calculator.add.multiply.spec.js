@@ -54,10 +54,6 @@ describe('It should test Calculator class method \'add\' negative scenarios', ()
     expect(() => calculator.add(68, null)()).to.throw('Unable to calculate, [null] is not a number');
   });
   // eslint-disable-next-line max-len
-  it('It should test that if \'number\' and \'increment\' are not defined(null) an error is thrown', () => {
-    expect(() => calculator.add(null, null)()).to.throw('Unable to calculate, [null] is not a number');
-  });
-  // eslint-disable-next-line max-len
   it('It should test that if \'number\' and \'increment\' are not defined(values are empty) an error is thrown', () => {
     expect(() => calculator.add()()).to.throw('Unable to calculate, [undefined] is not a number');
   });
@@ -72,10 +68,6 @@ describe('It should test Calculator class method \'add\' negative scenarios', ()
   // eslint-disable-next-line max-len
   it('It should test that if only \'number\' is defined(as undefined) an error is thrown', () => {
     expect(() => calculator.add(undefined)()).to.throw('Unable to calculate, [undefined] is not a number');
-  });
-  // eslint-disable-next-line max-len
-  it('It should test that if \'number\' and \'increment\' are not defined(undefined) an error is thrown', () => {
-    expect(() => calculator.add(undefined, undefined)()).to.throw('Unable to calculate, [undefined] is not a number');
   });
   // eslint-disable-next-line max-len
   it('It should test that if \'number\' is not defined(undefined) an error is thrown', () => {
@@ -135,10 +127,6 @@ describe('It should test Calculator class method \'multiply\' negative scenarios
     expect(() => multiplier.multiply(68, null)()).to.throw('Unable to multiply, [null] is not a number');
   });
   // eslint-disable-next-line max-len
-  it('It should test that if \'number\' and \'multiplier\' are not defined(null) an error is thrown', () => {
-    expect(() => multiplier.multiply(null, null)()).to.throw('Unable to multiply, [null] is not a number');
-  });
-  // eslint-disable-next-line max-len
   it('It should test that if \'number\' and \'multiplier\' are not defined(values are empty) an error is thrown', () => {
     expect(() => multiplier.multiply()()).to.throw('Unable to multiply, [undefined] is not a number');
   });
@@ -153,10 +141,6 @@ describe('It should test Calculator class method \'multiply\' negative scenarios
   // eslint-disable-next-line max-len
   it('It should test that if the only \'number\' is defined(as undefined) an error is thrown', () => {
     expect(() => multiplier.multiply(undefined)()).to.throw('Unable to multiply, [undefined] is not a number');
-  });
-  // eslint-disable-next-line max-len
-  it('It should test that if \'number\' and \'multiplier\' are not defined(undefined) an error is thrown', () => {
-    expect(() => multiplier.multiply(undefined, undefined)()).to.throw('Unable to multiply, [undefined] is not a number');
   });
   // eslint-disable-next-line max-len
   it('It should test that if \'number\' is not defined(undefined) an error is thrown', () => {
